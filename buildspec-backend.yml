@@ -19,7 +19,7 @@ phases:
       - echo "Subiendo imagen a Amazon ECR..."
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo "Creando archivo imagedefinitions.json..."
-      - printf '[{"name":"backend-app","imageUri":"%s"}]' "$REPOSITORY_URI:$IMAGE_TAG" > imagedefinitions.json
+      - printf '[{"name":"backend","imageUri":"%s"}]' "$REPOSITORY_URI:$IMAGE_TAG" > imagedefinitions.json
 artifacts:
   files:
     - imagedefinitions.json

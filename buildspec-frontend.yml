@@ -15,7 +15,7 @@ phases:
       - echo "Subiendo imagen a ECR..."
       - docker push 884178094984.dkr.ecr.us-east-1.amazonaws.com/frontend-app:latest
       - echo "Generando archivo imagedefinitions.json..."
-      - printf '[{"name":"frontend-app","imageUri":"884178094984.dkr.ecr.us-east-1.amazonaws.com/frontend-app:latest"}]' > imagedefinitions.json
+      - printf '[{"name":"frontend","imageUri":"884178094984.dkr.ecr.us-east-1.amazonaws.com/frontend-app:latest"}]' > imagedefinitions.json
 
 artifacts:
   files:
